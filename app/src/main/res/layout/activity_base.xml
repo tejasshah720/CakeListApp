@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/base_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+    <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </FrameLayout>
+
+    <RelativeLayout
+            android:id="@+id/rl_no_network"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cloud_off_48dp"
+                android:layout_centerInParent="true"/>
+
+        <TextView
+                android:id="@+id/tv_ohNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/oh_no"
+                android:fontFamily="@font/roboto"
+                android:layout_above="@+id/tv_no_internet"
+                android:textSize="@dimen/text_size_xxlarge"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="20dp"/>
+
+        <TextView
+                android:id="@+id/tv_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_internet"
+                android:fontFamily="@font/roboto"
+                android:layout_above="@+id/btn_retry"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"/>
+
+        <Button
+                android:id="@+id/btn_retry"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/internet_retry"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="100dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
